@@ -152,9 +152,7 @@ class Address extends \Faker\Provider\Address
     protected static $streetNameFormats = array(
         '{{bdStreetName}} {{streetSuffix}}',
         '{{bdStreetName}} {{streetSuffix}}',
-        '{{bdStreetName}} {{streetSuffix}}',
-        '{{firstName}} {{streetSuffix}}',
-
+        '{{bdStreetName}} {{streetSuffix}}'
     );
     protected static $streetAddressFormats = array(
 

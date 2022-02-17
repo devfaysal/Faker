@@ -7,8 +7,7 @@ class Company extends \Faker\Provider\Company
     protected static $formats = array(
         '{{companyName}} {{companyType}}',
         '{{companyName}} {{companySuffix}}',
-        '{{companyName}} {{companyType}} {{companySuffix}}',
-        '{{firstNameMale}} {{companyType}} {{companySuffix}}',
+        '{{companyName}} {{companyType}} {{companySuffix}}'
     );
 
     protected static $names = array(
