@@ -3,22 +3,13 @@
 namespace Faker\Test\Provider\en_BD;
 
 use Faker\Provider\en_BD\Address;
-use Faker\Generator;
-use PHPUnit\Framework\TestCase;
+use Faker\Test\TestCase;
 
 final class AddressTest extends TestCase
 {
-
-    /**
-     * @var Generator
-     */
-    private $faker;
-
-    protected function setUp()
+    protected function getProviders(): iterable
     {
-        $faker = new Generator();
-        $faker->addProvider(new Address($faker));
-        $this->faker = $faker;
+        yield new Address($this->faker);
     }
 
     public function testCityName()

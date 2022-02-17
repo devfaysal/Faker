@@ -2,23 +2,15 @@
 
 namespace Faker\Test\Provider\en_BD;
 
-use Faker\Generator;
 use Faker\Provider\en_BD\PhoneNumber;
-use PHPUnit\Framework\TestCase;
+use Faker\Test\TestCase;
 
 final class PhoneNumberTest extends TestCase
 {
 
-    /**
-     * @var Generator
-     */
-    private $faker;
-
-    protected function setUp()
+    protected function getProviders(): iterable
     {
-        $faker = new Generator();
-        $faker->addProvider(new PhoneNumber($faker));
-        $this->faker = $faker;
+        yield new PhoneNumber($this->faker);
     }
 
     public function testPhoneNumber()
